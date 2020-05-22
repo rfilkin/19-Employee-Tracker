@@ -5,10 +5,12 @@ export default {
   getUsers: function() {
     return axios.get("https://randomuser.me/api/?results=200&nat=us");
   },
+  //https://randomuser.me/api/?gender=female
   filterUserGenders: function(gender) {
-    return axios.get("https://dog.ceo/api/breed/" + gender + "/images");
-  },
-  sortUsersByLastName: function() {
-    return axios.get("https://dog.ceo/api/breed/lastname");
+    return axios.get("https://randomuser.me/api/?gender=" + gender);
   }
 };
+
+// //function compareNumbers(a, b) {
+//   return a - b;
+// }
